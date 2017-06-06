@@ -1,26 +1,27 @@
 header {
     background-color: #323232;
+    padding-top: 12px;
     text-align: center;
     font-size: rem(10px);
     color: #fff;
     text-transform: uppercase;
     font-family: var(--primary-font);
     font-weight: 700px;
-    
     .main-nav {
+        position: relative;
         margin: 0 auto;
         max-width: 370px;
         min-width: 300px;
-        // position: relative;
     }
     .header-logo {
         height: 100%;
+        // position: relative;
         &::after {
             content: "";
-            position: relative;
-            top: 26px;
+            position: absolute;
+            top: 100%;
+            right: calc(50% - 45px);
             display: block;
-            // margin: auto;
             border-top: 26px solid #323232;
             border-right: 45px solid transparent;
             border-left: 45px solid transparent;

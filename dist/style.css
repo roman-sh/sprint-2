@@ -483,6 +483,7 @@ fieldset {
 
 header {
   background-color: #323232;
+  padding-top: 12px;
   text-align: center;
   font-size: 0.625rem;
   color: #fff;
@@ -490,6 +491,7 @@ header {
   font-family: var(--primary-font);
   font-weight: 700px; }
   header .main-nav {
+    position: relative;
     margin: 0 auto;
     max-width: 370px;
     min-width: 300px; }
@@ -497,12 +499,29 @@ header {
     height: 100%; }
     header .header-logo::after {
       content: "";
-      position: relative;
-      top: 26px;
+      position: absolute;
+      top: 100%;
+      right: calc(50% - 45px);
       display: block;
       border-top: 26px solid #323232;
       border-right: 45px solid transparent;
       border-left: 45px solid transparent;
       background-color: white; }
+
+.img-select {
+  position: relative;
+  margin: 90px auto;
+  width: fit-content;
+  min-width: 200px; }
+  .img-select .row.row-even {
+    position: relative;
+    top: -38px; }
+  .img-select .row.row-odd {
+    justify-content: center; }
+  .img-select .row .meme-img {
+    width: 180px;
+    height: 206px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 0 10px; }
 
 /* Components */

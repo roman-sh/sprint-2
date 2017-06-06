@@ -1,0 +1,22 @@
+.img-select {
+    position: relative;
+    margin: 90px auto;
+    // width: calc(100vw - 40px);
+    width: fit-content;
+    min-width: 200px;
+    .row {
+        &.row-even {
+            position: relative;
+            top: -38px;
+        }
+        &.row-odd {
+            justify-content: center;
+        }
+        .meme-img {
+            width: 180px;
+            height: 206px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            margin: 0 10px;
+        }
+    }
+}
