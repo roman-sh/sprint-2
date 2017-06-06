@@ -1,17 +1,17 @@
-$container-width: 1063px;
-$mobile-breakpoint: 520px;
+// $container-width: 1063px;
+$mobile-breakpoint: 600px;
 
-:root {
-  /* Layout */
-  --container-width: $container-width;
-  --inner-container-width: 900px;
-  /* Fonts */
-  --primary-font: Lato;
-  --secondary-font: Ubuntu;
-  /* Colors */
-  --main-color: #626262;
-  --sections-bg: #f0f0f0;
-}
+// :root {
+//   /* Layout */
+//   --container-width: $container-width;
+//   --inner-container-width: 900px;
+//   /* Fonts */
+//   --primary-font: Lato;
+//   --secondary-font: Ubuntu;
+//   /* Colors */
+//   --main-color: #626262;
+//   --sections-bg: #f0f0f0;
+// }
 
 .img-select {
   --hexa-width: 90px;

@@ -1,6 +1,9 @@
 'use strict';
 
-var BREAK_POINT = 520; // the width of the viewport for media query that doubles the img size.
+var BREAK_POINT = 600; // the width of the viewport for media query that doubles the img size.
+var gPrevMaxImgPerRow;
+var testCount = 0;
+
 
 // TODO: change name to renderImgSelection
 function renderImgSelect(imgs) {
@@ -12,10 +15,15 @@ function renderImgSelect(imgs) {
         rowMargin *= 2;
     }
     var maxImgPerRow = Math.floor(viewportW / elHexaWidth);
+    if (maxImgPerRow === gPrevMaxImgPerRow) return;
+    gPrevMaxImgPerRow = maxImgPerRow;
 
     var htmlStr = getImgSelectHtml(imgs, rowMargin, maxImgPerRow);
 
-    document.querySelector('.img-select').innerHTML = htmlStr;
+    var elImgSelect = document.querySelector('.img-select');
+    elImgSelect.innerHTML = htmlStr;
+    centerElImgs(elImgSelect.querySelectorAll('img'));
+    console.log(++testCount);
 }
 
 function getImgSelectHtml(imgs, rowMargin, maxImgPerRow) {
@@ -36,4 +44,11 @@ function getImgSelectHtml(imgs, rowMargin, maxImgPerRow) {
         rowCount++
     }
     return htmlStr;
+}
+
+function centerElImgs(elImgs) {
+    elImgs.forEach(function(elImg) {
+        var atrrValue = `right: calc(50% - ${elImg.width / 2}px)`;
+        elImg.setAttribute('style', atrrValue);
+    });
 }

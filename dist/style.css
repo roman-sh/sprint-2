@@ -422,22 +422,11 @@ template {
   src: url("../assets/fonts/ubunto/Ubuntu-Light.ttf");
   font-weight: 400; }
 
-:root {
-  /* Layout */
-  --container-width: 1063px;
-  --inner-container-width: 900px;
-  /* Fonts */
-  --primary-font: Lato;
-  --secondary-font: Ubuntu;
-  /* Colors */
-  --main-color: #626262;
-  --sections-bg: #f0f0f0; }
-
 .img-select {
   --hexa-width: 90px;
   --hexa-height: 103px; }
 
-@media (min-width: 520px) {
+@media (min-width: 600px) {
   .img-select {
     --hexa-width: 180px;
     --hexa-height: 206px; } }
@@ -517,22 +506,11 @@ header {
       border-left: 45px solid transparent;
       background-color: white; }
 
-:root {
-  /* Layout */
-  --container-width: 1063px;
-  --inner-container-width: 900px;
-  /* Fonts */
-  --primary-font: Lato;
-  --secondary-font: Ubuntu;
-  /* Colors */
-  --main-color: #626262;
-  --sections-bg: #f0f0f0; }
-
 .img-select {
   --hexa-width: 90px;
   --hexa-height: 103px; }
 
-@media (min-width: 520px) {
+@media (min-width: 600px) {
   .img-select {
     --hexa-width: 180px;
     --hexa-height: 206px; } }
@@ -554,9 +532,9 @@ header {
     overflow: hidden; }
     .img-select .meme-img img {
       position: absolute;
-      height: 100%; }
+      height: calc(var(--hexa-height) * 1.1); }
 
-@media (min-width: 520px) {
+@media (min-width: 600px) {
   .img-select .row:nth-of-type(odd) {
     padding-left: calc((var(--hexa-width) / 2) + 10px); }
   .img-select .meme-img {
