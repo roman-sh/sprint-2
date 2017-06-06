@@ -469,7 +469,7 @@ template {
 html {
   color: var(--main-color);
   font-family: var(--primary-font);
-  font-size: 12px; }
+  font-size: 14px; }
 
 a {
   color: currentColor;
@@ -484,11 +484,11 @@ fieldset {
 header {
   background-color: #323232;
   text-align: center;
-  font-size: 0.4375em;
-  color: #fff; }
+  font-size: 0.85714rem;
+  color: #fff;
+  text-transform: uppercase; }
   header .main-nav {
     margin: 0 auto;
-    width: fit-content;
     min-width: 300px; }
 
 /* Components */
