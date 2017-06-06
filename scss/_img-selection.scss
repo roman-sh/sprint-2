@@ -1,21 +1,41 @@
+@import 'vars';
+
 .img-select {
-    position: relative;
-    margin: 90px auto;
+    // position: relative;
+    margin: 50px auto;
     // width: calc(100vw - 40px);
     width: fit-content;
     min-width: 200px;
     .row {
-        &.row-even {
-            position: relative;
-            top: -38px;
+        position: relative;
+        &:nth-of-type(odd) {
+            padding-left: calc((var(--hexa-width) / 2) + 5px);
         }
-        &.row-odd {
-            justify-content: center;
+    }
+    .meme-img {
+        position: relative;
+        // width: 180px; for media query
+        // height: 206px;
+        width: var(--hexa-width);
+        height: var(--hexa-height);
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        margin: 0 5px;
+        overflow: hidden;
+        & img {
+            // width: 100%;
+            position: absolute;
+            height: 100%;
+            // right: calc(50% - 75px); TODO: set in the rendering function according to img width
         }
+    }
+}
+
+@media (min-width: $mobile-breakpoint) {
+    .img-select {
+        .row:nth-of-type(odd) {
+        padding-left: calc((var(--hexa-width) / 2) + 10px);
+    }
         .meme-img {
-            width: 180px;
-            height: 206px;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             margin: 0 10px;
         }
     }

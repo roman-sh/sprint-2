@@ -1,5 +1,5 @@
 $container-width: 1063px;
-$mobile-breakpoint: 642px;
+$mobile-breakpoint: 520px;
 
 :root {
   /* Layout */
@@ -13,4 +13,14 @@ $mobile-breakpoint: 642px;
   --sections-bg: #f0f0f0;
 }
 
+.img-select {
+  --hexa-width: 90px;
+  --hexa-height: 103px;
+}
 
+@media (min-width: $mobile-breakpoint) {
+  .img-select {
+    --hexa-width: 180px;
+    --hexa-height: 206px;
+  }
+}
