@@ -491,5 +491,16 @@ header {
     margin: 0 auto;
     max-width: 370px;
     min-width: 300px; }
+  header .header-logo {
+    height: 100%; }
+    header .header-logo::after {
+      content: "";
+      position: relative;
+      top: 26px;
+      display: block;
+      border-top: 26px solid #323232;
+      border-right: 45px solid transparent;
+      border-left: 45px solid transparent;
+      background-color: white; }
 
 /* Components */
