@@ -411,10 +411,10 @@ template {
   display: block;
   width: 100%; }
 
-/*----------  Playfair Font  ----------*/
+/*----------  Lato Font  ----------*/
 @font-face {
-  font-family: 'Playfair';
-  src: url("../assets/fonts/playfair/PlayfairDisplay-Regular.ttf"); }
+  font-family: 'Lato';
+  src: url("../assets/fonts/lato/Lato-Regular.ttf"); }
 
 /*----------  Ubunto Font  ----------*/
 @font-face {
@@ -427,7 +427,7 @@ template {
   --container-width: 1063px;
   --inner-container-width: 900px;
   /* Fonts */
-  --primary-font: Playfair;
+  --primary-font: Lato;
   --secondary-font: Ubuntu;
   /* Colors */
   --main-color: #626262;
@@ -484,9 +484,11 @@ fieldset {
 header {
   background-color: #323232;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   color: #fff;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+  font-weight: 700px; }
   header .main-nav {
     margin: 0 auto;
     max-width: 370px;
