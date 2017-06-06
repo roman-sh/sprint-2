@@ -484,11 +484,12 @@ fieldset {
 header {
   background-color: #323232;
   text-align: center;
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   color: #fff;
   text-transform: uppercase; }
   header .main-nav {
     margin: 0 auto;
+    max-width: 370px;
     min-width: 300px; }
 
 /* Components */

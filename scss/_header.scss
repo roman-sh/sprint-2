@@ -4,8 +4,10 @@ header {
     font-size: rem(12px);
     color: #fff;
     text-transform: uppercase;
+    
     .main-nav {
         margin: 0 auto;
+        max-width: 370px;
         min-width: 300px;
     }
 }
