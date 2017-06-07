@@ -549,6 +549,12 @@ header {
   .img-select .meme-img {
     margin: 0 10px; } }
 
+.meme-generator {
+  margin-bottom: 30px; }
+
+canvas {
+  border: 1px solid hotpink; }
+
 .main-container {
   background-color: #2eb398;
   height: 342px; }
