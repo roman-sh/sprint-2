@@ -1,4 +1,7 @@
+var CANVAS_SELECTOR = '#meme-canvas';
+
 var gImgs = [];
+var gState;
 
 function createImgObj(id, url, keywords) {
     var img = {
@@ -24,8 +27,55 @@ createImgObj(12, 'assets/img/img12.jpeg', ['dog','happy']);
 createImgObj(13, 'assets/img/img13.jpeg', ['dog','white']);
 
 function init(el) {
+    gState = getInitGState();
     renderImgSelect(gImgs);
     el.addEventListener('resize', function() {
         renderImgSelect(gImgs);
     });
+}
+
+function getInitGState() {
+    gState = {
+        selectedImgId: 4,
+        txts: [
+            {
+                text: 'I like your style',
+                size: 18,
+                font: 'Lato',
+                align: 'center',
+                color: 'hotpink'
+            },
+            {
+                text: 'But you suck',
+                size: 22,
+                font: 'monospace',
+                align: 'center',
+                color: 'tomato'
+            }
+        ]
+    }
+    return gState;
+}
+
+
+function renderCanvas() {
+    var elCanvas = document.querySelector(CANVAS_SELECTOR);
+    var context = elCanvas.getContext('2d');
+    var elImg = document.createElement('img');
+    var imgSrc = gImgs[gState.selectedImgId - 1].url;
+    elImg.setAttribute('src', imgSrc);
+
+    context.drawImage(elImg, 0, 0);
+
+    renderCanvasTxts(context);
+}
+
+function renderCanvasTxts(context) {
+    gState.txts.forEach(function(txt, i) {
+
+        context.fillStyle = txt.color;
+        context.font = txt.size + 'px ' + txt.font;
+        context.fillText(txt.text, 20, 20*(i+1));
+
+    })
 }
