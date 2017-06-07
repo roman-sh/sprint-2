@@ -422,6 +422,7 @@ template {
   src: url("../assets/fonts/maven_pro/MavenPro-Regular.ttf");
   font-weight: 400; }
 
+<<<<<<< HEAD
 :root {
   /* Layout */
   --container-width: 1063px;
@@ -432,6 +433,16 @@ template {
   /* Colors */
   --main-color: #626262;
   --sections-bg: #f0f0f0; }
+=======
+.img-select {
+  --hexa-width: 90px;
+  --hexa-height: 103px; }
+
+@media (min-width: 600px) {
+  .img-select {
+    --hexa-width: 180px;
+    --hexa-height: 206px; } }
+>>>>>>> 6d2c1c520cb6476ce728a1e7a877e6d3b4042642
 
 /*----------  Containers  ----------*/
 .container {
@@ -515,12 +526,25 @@ header {
       background-color: white; }
 
 .img-select {
-  position: relative;
-  margin: 90px auto;
+  --hexa-width: 90px;
+  --hexa-height: 103px; }
+
+@media (min-width: 600px) {
+  .img-select {
+    --hexa-width: 180px;
+    --hexa-height: 206px; } }
+
+.img-select {
+  margin: 50px auto;
   width: fit-content;
   min-width: 200px; }
-  .img-select .row.row-even {
+  .img-select .row {
+    position: relative; }
+    .img-select .row:nth-of-type(odd) {
+      padding-left: calc((var(--hexa-width) / 2) + 5px); }
+  .img-select .meme-img {
     position: relative;
+<<<<<<< HEAD
     top: -38px; }
   .img-select .row.row-odd {
     justify-content: center; }
@@ -549,5 +573,21 @@ header {
         color: #20816d; }
       .main-container .about-us .about-us-txt p {
         font-size: 12px; }
+=======
+    width: var(--hexa-width);
+    height: var(--hexa-height);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 0 5px;
+    overflow: hidden; }
+    .img-select .meme-img img {
+      position: absolute;
+      height: calc(var(--hexa-height) * 1.1); }
+
+@media (min-width: 600px) {
+  .img-select .row:nth-of-type(odd) {
+    padding-left: calc((var(--hexa-width) / 2) + 10px); }
+  .img-select .meme-img {
+    margin: 0 10px; } }
+>>>>>>> 6d2c1c520cb6476ce728a1e7a877e6d3b4042642
 
 /* Components */
