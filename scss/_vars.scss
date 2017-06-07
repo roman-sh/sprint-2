@@ -4,6 +4,7 @@ $mobile-breakpoint: 600px;
 :root {
   /* Layout */
   --container-width: $container-width;
+<<<<<<< HEAD
   --inner-container-width: 900px;
   /* Fonts */
   --primary-font: Lato;
@@ -11,6 +12,15 @@ $mobile-breakpoint: 600px;
   /* Colors */
   --main-color: #2eb398;
   --sections-bg: #323232;
+=======
+  --inner-container-width: 820px;
+  /* Fonts */
+  --primary-font: Lato;
+  --secondary-font: MavenPro;
+  /* Colors */
+  --main-color: #626262;
+  --sections-bg: #f0f0f0;
+>>>>>>> d487d921458c3b6876ab20445b8e1cd51cc587c9
 }
 
 .hexa {

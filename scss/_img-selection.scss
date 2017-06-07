@@ -29,11 +29,12 @@
     }
 }
 
+
 @media (min-width: $mobile-breakpoint) {
     .img-select {
         .row:nth-of-type(odd) {
-        padding-left: calc((var(--hexa-width) / 2) + 10px);
-    }
+             padding-left: calc((var(--hexa-width) / 2) + 10px);
+        }
         .meme-img {
             margin: 0 10px;
         }
