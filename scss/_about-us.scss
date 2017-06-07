@@ -6,6 +6,10 @@
         width: 100%;
         max-width: 820px;
 
+        & img {
+            height: 120%;
+        }
+
 
         .about-us-txt {
             max-width: calc(100% - 226px);
@@ -25,9 +29,8 @@
             }
             p {
                 font-size: 12px;
+                line-height: 22px;
             }
-
         }
     }
-
 }
