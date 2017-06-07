@@ -1,25 +1,25 @@
 // $container-width: 1063px;
 $mobile-breakpoint: 600px;
 
-// :root {
-//   /* Layout */
-//   --container-width: $container-width;
-//   --inner-container-width: 900px;
-//   /* Fonts */
-//   --primary-font: Lato;
-//   --secondary-font: Ubuntu;
-//   /* Colors */
-//   --main-color: #626262;
-//   --sections-bg: #f0f0f0;
-// }
+:root {
+  /* Layout */
+  --container-width: $container-width;
+  --inner-container-width: 900px;
+  /* Fonts */
+  --primary-font: Lato;
+  --secondary-font: Ubuntu;
+  /* Colors */
+  --main-color: #2eb398;
+  --sections-bg: #323232;
+}
 
-.img-select {
+.hexa {
   --hexa-width: 90px;
   --hexa-height: 103px;
 }
 
 @media (min-width: $mobile-breakpoint) {
-  .img-select {
+  .hexa {
     --hexa-width: 180px;
     --hexa-height: 206px;
   }
