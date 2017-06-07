@@ -53,7 +53,8 @@ function getInitGState() {
                 color: 'tomato'
             }
         ],
-        shouldRenderImgs: true
+        shouldRenderImgs: true,
+        prevMaxImgPerRow: undefined
     }
     return gState;
 }
@@ -106,5 +107,6 @@ function backToImgSelect(el) {
     el.parentNode.classList.add('hide');
     
     gState.shouldRenderImgs = true;
+    gState.prevMaxImgPerRow = undefined;
     renderImgSelect(gImgs);
 }

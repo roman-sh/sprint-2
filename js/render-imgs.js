@@ -1,7 +1,7 @@
 'use strict';
 
 var BREAK_POINT = 600; // the width of the viewport for media query that doubles the img size.
-var gPrevMaxImgPerRow;
+// var gPrevMaxImgPerRow;
 var testCount = 0;
 
 
@@ -17,8 +17,8 @@ function renderImgSelect(imgs) {
     }
     var maxImgPerRow = Math.floor(viewportW / elHexaWidth);
 
-    // if (maxImgPerRow === gPrevMaxImgPerRow) return;
-    // gPrevMaxImgPerRow = maxImgPerRow;
+    if (maxImgPerRow === gState.prevMaxImgPerRow) return;
+    gState.prevMaxImgPerRow = maxImgPerRow;
 
     var htmlStr = getImgSelectHtml(imgs, rowMargin, maxImgPerRow);
 
