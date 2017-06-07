@@ -1,4 +1,4 @@
-var CANVAS_SELECTOR = '#meme-canvas';
+var CANVAS_BOX_SELECTOR = '.canvas-container';
 
 var gImgs = [];
 var gState;
@@ -12,19 +12,19 @@ function createImgObj(id, url, keywords) {
     gImgs.push(img);
 }
 
-createImgObj(1, 'assets/img/img1.jpeg', ['crying']);
-createImgObj(2, 'assets/img/img2.jpeg', ['cheers']);
-createImgObj(3, 'assets/img/img3.jpeg', ['smiling']);
-createImgObj(4, 'assets/img/img4.jpeg', ['worried']);
-createImgObj(5, 'assets/img/img5.jpeg', ['funny']);
-createImgObj(6, 'assets/img/img6.jpeg', ['baby']);
-createImgObj(7, 'assets/img/img7.jpeg', ['obama']);
-createImgObj(8, 'assets/img/img8.jpeg', ['girl']);
-createImgObj(9, 'assets/img/img9.jpeg', ['think']);
-createImgObj(10, 'assets/img/img10.jpeg', ['kittie']);
-createImgObj(11, 'assets/img/img11.jpeg', ['cat']);
-createImgObj(12, 'assets/img/img12.jpeg', ['dog','happy']);
-createImgObj(13, 'assets/img/img13.jpeg', ['dog','white']);
+createImgObj(1, 'assets/img/img1.jpg', ['crying']);
+createImgObj(2, 'assets/img/img2.jpg', ['cheers']);
+createImgObj(3, 'assets/img/img3.jpg', ['smiling']);
+createImgObj(4, 'assets/img/img4.jpg', ['worried']);
+createImgObj(5, 'assets/img/img5.jpg', ['funny']);
+createImgObj(6, 'assets/img/img6.jpg', ['baby']);
+createImgObj(7, 'assets/img/img7.jpg', ['obama']);
+createImgObj(8, 'assets/img/img8.jpg', ['girl']);
+createImgObj(9, 'assets/img/img9.jpg', ['think']);
+createImgObj(10, 'assets/img/img10.jpg', ['kittie']);
+createImgObj(11, 'assets/img/img11.jpg', ['cat']);
+createImgObj(12, 'assets/img/img12.jpg', ['dog','happy']);
+createImgObj(13, 'assets/img/img13.jpg', ['dog','white']);
 
 function init(el) {
     gState = getInitGState();
@@ -52,22 +52,34 @@ function getInitGState() {
                 align: 'center',
                 color: 'tomato'
             }
-        ]
+        ],
+        shouldRenderImgs: true
     }
     return gState;
 }
 
 
 function renderCanvas() {
-    var elCanvas = document.querySelector(CANVAS_SELECTOR);
-    var context = elCanvas.getContext('2d');
-    var elImg = document.createElement('img');
-    var imgSrc = gImgs[gState.selectedImgId - 1].url;
-    elImg.setAttribute('src', imgSrc);
+    var elCanvas = document.createElement('canvas');
+    
+    var img = gImgs.find(function(img) { return img.id === gState.selectedImgId ;})
+    var elImg = new Image;
+    elImg.src = img.url;
 
+    elCanvas.setAttribute('width', elImg.width);
+    elCanvas.setAttribute('height', elImg.height);
+    
+    var context = elCanvas.getContext('2d');
+    context.clearRect(0, 0, elCanvas.width, elCanvas.height);
     context.drawImage(elImg, 0, 0);
 
     renderCanvasTxts(context);
+
+    var elCanvasBox = document.querySelector(CANVAS_BOX_SELECTOR);
+    elCanvasBox.innerHTML = '';
+    elCanvasBox.appendChild(elCanvas);
+
+    elCanvasBox.parentNode.classList.remove('hide');
 }
 
 function renderCanvasTxts(context) {
@@ -78,4 +90,21 @@ function renderCanvasTxts(context) {
         context.fillText(txt.text, 20, 20*(i+1));
 
     })
+}
+
+function memeImgClicked(imgId) {
+    gState.shouldRenderImgs = false;
+    gState.selectedImgId = imgId;
+    renderCanvas();
+
+    var elImgSelect = document.querySelector('.img-select');
+    elImgSelect.classList.add('hide');
+
+}
+
+function backToImgSelect(el) {
+    el.parentNode.classList.add('hide');
+    
+    gState.shouldRenderImgs = true;
+    renderImgSelect(gImgs);
 }

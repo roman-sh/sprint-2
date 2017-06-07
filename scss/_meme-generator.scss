@@ -1,8 +1,17 @@
 .meme-generator {
-    margin-bottom: 30px;
-    
+    padding-bottom: 50px;
+    width: calc(100% - 20px);
+    margin: auto;
+    text-align: center;
+
+    .canvas-container {
+        width: fit-content;
+        margin: auto;
+    }
+
+    canvas {
+        border: 1px solid hotpink;
+        max-width: 100%;
+    }   
 }
 
-canvas {
-    border: 1px solid hotpink;
-}
