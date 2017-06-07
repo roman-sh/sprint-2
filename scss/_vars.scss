@@ -1,4 +1,4 @@
-// $container-width: 1063px;
+$container-width: 1063px;
 $mobile-breakpoint: 600px;
 
 :root {
@@ -9,17 +9,15 @@ $mobile-breakpoint: 600px;
   --primary-font: Lato;
   --secondary-font: MavenPro;
   /* Colors */
-  --main-color: #626262;
-  --sections-bg: #f0f0f0;
-}
-
-.img-select {
+  --main-color: #2eb398;
+  --secondary-color: #323232;
+  /* Hexagon */
   --hexa-width: 90px;
   --hexa-height: 103px;
 }
 
 @media (min-width: $mobile-breakpoint) {
-  .img-select {
+  :root {
     --hexa-width: 180px;
     --hexa-height: 206px;
   }

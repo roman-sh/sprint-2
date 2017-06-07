@@ -1,5 +1,5 @@
 header {
-    background-color: #323232;
+    background-color: var(--secondary-color);
     padding-top: 12px;
     text-align: center;
     font-size: rem(10px);
@@ -22,7 +22,7 @@ header {
             top: 100%;
             right: calc(50% - 45px);
             display: block;
-            border-top: 26px solid #323232;
+            border-top: 26px solid var(--secondary-color);
             border-right: 45px solid transparent;
             border-left: 45px solid transparent;
             background-color: white;
