@@ -1,35 +1,23 @@
-// $container-width: 1063px;
+$container-width: 1063px;
 $mobile-breakpoint: 600px;
 
 :root {
   /* Layout */
   --container-width: $container-width;
-<<<<<<< HEAD
-  --inner-container-width: 900px;
-  /* Fonts */
-  --primary-font: Lato;
-  --secondary-font: Ubuntu;
-  /* Colors */
-  --main-color: #2eb398;
-  --sections-bg: #323232;
-=======
   --inner-container-width: 820px;
   /* Fonts */
   --primary-font: Lato;
   --secondary-font: MavenPro;
   /* Colors */
-  --main-color: #626262;
-  --sections-bg: #f0f0f0;
->>>>>>> d487d921458c3b6876ab20445b8e1cd51cc587c9
-}
-
-.hexa {
+  --main-color: #2eb398;
+  --secondary-color: #323232;
+  /* Hexagon */
   --hexa-width: 90px;
   --hexa-height: 103px;
 }
 
 @media (min-width: $mobile-breakpoint) {
-  .hexa {
+  :root {
     --hexa-width: 180px;
     --hexa-height: 206px;
   }

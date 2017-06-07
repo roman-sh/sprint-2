@@ -14,9 +14,9 @@
         position: relative;
         // width: 180px; for media query
         // height: 206px;
-        width: var(--hexa-width);
-        height: var(--hexa-height);
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        // width: var(--hexa-width);
+        // height: var(--hexa-height);
+        // clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
         margin: 0 5px;
         overflow: hidden;
         & img {
