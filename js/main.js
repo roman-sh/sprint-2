@@ -109,20 +109,26 @@ function renderCanvasTxts(context) {
 }
 
 function memeImgClicked(imgId) {
-    gState.shouldRenderImgs = false;
-    gState.selectedImgId = imgId;
-    renderCanvas();
+    animateOut();
+    setTimeout(function(){
+        gState.shouldRenderImgs = false;
+        gState.selectedImgId = imgId;
+        renderCanvas();
+        animateCanvas();
 
-    var elImgSelect = document.querySelector('.img-select');
-    elImgSelect.classList.add('hide');
-
+        var elImgSelect = document.querySelector('.img-select');
+        elImgSelect.classList.add('hide');
+    },1000)
+    
 }
 
-function backToImgSelect(el) {
-    el.parentNode.classList.add('hide');
+function backToImgSelect() {
+    elGenerator = document.querySelector('.meme-generator')
+    elGenerator.classList.add('hide');
     
     gState.shouldRenderImgs = true;
     gState.prevMaxImgPerRow = undefined;
+    gShouldAnimate = true;
     renderImgSelect(gState.currImgsToRender);
 }
 

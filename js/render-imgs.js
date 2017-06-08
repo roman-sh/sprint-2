@@ -24,6 +24,11 @@ function renderImgSelect(imgs) {
 
     var elImgSelect = document.querySelector('.img-select');
     elImgSelect.innerHTML = htmlStr;
+
+    if (gShouldAnimate) {
+        animateIn();
+        gShouldAnimate = false;
+    }
     // centerElImgs(elImgSelect.querySelectorAll('img'));
 
     setTimeout(function() { centerElImgs(elImgSelect.querySelectorAll('img')) }, 150); // TODO: implement a better solution
