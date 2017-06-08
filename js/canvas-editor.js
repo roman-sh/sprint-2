@@ -25,3 +25,21 @@ function changeStrokeColor(color,txtIdx) {
     gState.txts[txtIdx].strokeColor = color;
     renderCanvas();
 }
+
+function moveText(direction,txtIdx) {
+    switch (direction) {
+        case 'up':
+            gState.txts[txtIdx].y -= 5;
+            break;
+        case 'down':
+            gState.txts[txtIdx].y += 5;
+            break;
+        case 'left':
+            gState.txts[txtIdx].x -= 5;
+            break;
+         case 'right':
+            gState.txts[txtIdx].x += 5;
+            break;
+    }
+    renderCanvas();
+}

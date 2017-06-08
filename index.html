@@ -109,6 +109,12 @@
             <button  onclick="fontSizeClicked('+',0)">Size +</button>
             <button  onclick="fontSizeClicked('-',0)">Size -</button>
           </div>
+          <div>
+            <button onclick="moveText('up',0)">↑</button>
+            <button onclick="moveText('down',0)">↓</button>
+            <button onclick="moveText('left',0)">←</button>
+            <button onclick="moveText('right',0)">→</button>
+          </div>
         </div>
         <div class="controls flex flex-wrap justify-center">
           <input type="text" placeholder="some text" onkeyup="updateText(value,1)">
@@ -130,6 +136,12 @@
             </select>
             <button  onclick="fontSizeClicked('+',1)">Size +</button>
             <button  onclick="fontSizeClicked('-',1)">Size -</button>
+          </div>
+          <div>
+            <button onclick="moveText('up',1)">↑</button>
+            <button onclick="moveText('down',1)">↓</button>
+            <button onclick="moveText('left',1)">←</button>
+            <button onclick="moveText('right',1)">→</button>
           </div>
         </div>
       </div>

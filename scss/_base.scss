@@ -24,6 +24,10 @@ h2, h3 {
   margin: 4px 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .hexa {
   width: var(--hexa-width);
   height: var(--hexa-height);
