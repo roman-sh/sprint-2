@@ -1,4 +1,9 @@
+
 .keywords-container {
+    width: 80%;
+    margin: auto;
+    height: 20vw;
+    overflow-y: scroll;
     ul {
         align-items: baseline;
     }
