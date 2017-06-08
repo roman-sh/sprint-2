@@ -11,12 +11,17 @@ function updateText(text,txtIdx) {
     renderCanvas();
 }
 
-function changeColor(color,txtIdx) {
+function changeTextColor(color,txtIdx) {
     gState.txts[txtIdx].color = color;
     renderCanvas();
 }
 
 function changeFont(font,txtIdx) {
     gState.txts[txtIdx].font = font;
+    renderCanvas();
+}
+
+function changeStrokeColor(color,txtIdx) {
+    gState.txts[txtIdx].strokeColor = color;
     renderCanvas();
 }

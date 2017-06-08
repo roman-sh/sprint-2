@@ -26,7 +26,7 @@ function renderImgSelect(imgs) {
     elImgSelect.innerHTML = htmlStr;
     // centerElImgs(elImgSelect.querySelectorAll('img'));
 
-    setTimeout(function() { centerElImgs(elImgSelect.querySelectorAll('img')) }, 50); // TODO: implement a better solution
+    setTimeout(function() { centerElImgs(elImgSelect.querySelectorAll('img')) }, 150); // TODO: implement a better solution
     console.log(++testCount);
     elImgSelect.classList.remove('hide');
 }

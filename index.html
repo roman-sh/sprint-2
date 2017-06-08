@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roman's and Chen's Crazy Adventures</title>
-  <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Mogra|Open+Sans+Condensed:300|Varela+Round|Vibur" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Mogra|Varela+Round|Vibur" rel="stylesheet">
   <link rel="stylesheet" href="dist/style.css" />
 </head>
 
@@ -55,7 +55,12 @@
       <div class="editor">
         <div class="controls0">
           <input type="text" placeholder="some text" onkeyup="updateText(value,0)">
-          <input type="color" onchange="changeColor(value,0)">
+          <label>Text color:
+            <input type="color" onchange="changeTextColor(value,0)">
+          </label>
+          <label>Outline color:
+            <input type="color" onchange="changeStrokeColor(value,0)">
+          </label>
           <select name="fonts" onchange="changeFont(value,0)">
             <option value="" disabled selected>Select Font</option>
             <option value="Vibur">Vibur</option>
@@ -68,7 +73,12 @@
         </div>
         <div class="controls1">
           <input type="text" placeholder="some text" onkeyup="updateText(value,1)">
-          <input type="color" onchange="changeColor(value,1)">
+          <label>Text color:
+            <input type="color" onchange="changeTextColor(value,1)">
+          <label>
+          <label>Outline color:
+            <input type="color" onchange="changeStrokeColor(value,1)">
+          </label>
           <select name="fonts" onchange="changeFont(value,1)">
             <option value="" disabled selected>Select Font</option>
             <option value="Vibur">Vibur</option>
