@@ -5,9 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roman's and Chen's Crazy Adventures</title>
-  <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Mogra|Open+Sans+Condensed:300|Varela+Round|Vibur" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Mogra|Varela+Round|Vibur" rel="stylesheet">
   <link rel="stylesheet" href="dist/style.css" />
 </head>
+
+<div class="preload-fonts">
+  <span style="font-family: 'Bubbler One'"></span>
+  <span style="font-family: 'Mogra'"></span>
+  <span style="font-family: 'Varela Round'"></span>
+  <span style="font-family: 'Vibur'"></span>
+</div>
 
 <body onload="init(this)">
 
@@ -49,8 +56,10 @@
     </section>
 
     <section class="meme-generator hide">
-      <div class="canvas-container">
-        <!--<canvas id="meme-canvas" width="400" height="300"></canvas>-->
+      <div class="canvas-rendering-zone">
+        <div class="canvas-container">
+          <!--<canvas id="meme-canvas" width="400" height="300"></canvas>-->
+        </div>
       </div>
       <div class="editor">
         <div class="controls0">
