@@ -25,11 +25,13 @@
       <div class="right flex align-center">
       <ul class="clean-list fixed-menu flex align-center">
         <li><a href="#">portfolio</a></li>
-        <li><a href="#">about</a></li>
+        <li><a href="#about-roman-and-chen">about</a></li>
       </ul>
       </div>
       <div class="center">
-        <a class="header-logo" href="#"><img src="assets/img/logo.png" alt="Company Logo" /></a>
+        <a class="header-logo" href="" onclick="renderImgSelect(gImgs)">
+          <img src="assets/img/logo.png" alt="Company Logo" />
+        </a>
       </div>
       <div class="left flex align-center">
       <ul class="clean-list changing-menu flex align-center img-search">
@@ -43,24 +45,7 @@
       </div>
     </nav>
   </header>
-  <!--<header>
-    <nav class="main-nav">
-      <ul class="clean-list flex space-between align-center">
-        <li><a href="#">portfolio</a></li>
-        <li><a href="#">about</a></li>
-        <li class="header-logo"><a href="#"><img src="assets/img/logo.png" alt="Company Logo" /></a></li>
-        <li><a href="#">blog</a></li>
-        <li><a href="#">get in touch</a></li>
-      </ul>
-    </nav>
-  </header>-->
-
-  <!--<section class="img-search">
-    
-    <input type="text" id="img-search-box" onkeyup="searchIfEnter(event, this)" placeholder="keyword1, keyword2..." />
-
-    <button onclick="toggleElementVisibility(this.parentNode, '.keywords-container')">Show popular keywords</button>-->
-
+  
   <section class="keywords"><div class="keywords-container hide"></div></section>
 
   <main class="action-container">
@@ -145,15 +130,14 @@
           </div>
         </div>
       </div>
-      <div class="control-buttons">
-        <button onclick="backToImgSelect()">Back to image selection</button>
-        <button onclick="gotoCanvasImg()">Get a downloadable version</button>
-      </div>
+      <!--<button onClick="addTxt()">Add a line of text</button>-->
+      <!--<button onclick="backToImgSelect(this)">Back to image selection</button>
+      <button onclick="gotoCanvasImg()">Get a downloadable version</button>-->
     </section>
   </main>
   
   <div class="main-container flex align-center justify-center">
-    <section class="about-us flex flex-wrap space-between">
+    <section id="about-roman-and-chen" class="about-us flex flex-wrap space-between">
       <div class="about-img hexa"><img src="assets/img/chen1.jpeg" alt=""></div>
       <div class="about-us-txt flex flex-column space-between">
         <div>
