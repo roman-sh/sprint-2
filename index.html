@@ -31,9 +31,27 @@
 
     <div class="keywords-container hide"></div>
 
-  <section class="meme-generator flex justify-center">
-    <div class="canvas-container">
-      <canvas id="meme-canvas" width="400" height="300"></canvas>
+  <main class="action-container">
+    <section class="img-select">
+      <!--<div class="row row-odd flex">
+        <div class="meme-img"><img src="assets/img/img1.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img2.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img3.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img4.jpeg" alt=""></div>
+      </div>
+      <div class="row row-even flex">
+        <div class="meme-img"><img src="assets/img/img5.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img6.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img7.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img8.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img9.jpeg" alt=""></div>
+      </div>-->
+    </section>
+
+    <section class="meme-generator hide">
+      <div class="canvas-container">
+        <!--<canvas id="meme-canvas" width="400" height="300"></canvas>-->
+      </div>
       <div class="editor">
         <div class="controls0">
           <input type="text" placeholder="some text" onkeyup="updateText(value,0)">
@@ -61,39 +79,6 @@
           <button  onclick="fontSizeClicked('+',1)">+</button>
           <button  onclick="fontSizeClicked('-',1)">-</button>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <main class="action-container">
-    <section class="img-select">
-      <!--<div class="row row-odd flex">
-        <div class="meme-img"><img src="assets/img/img1.jpeg" alt=""></div>
-        <div class="meme-img"><img src="assets/img/img2.jpeg" alt=""></div>
-        <div class="meme-img"><img src="assets/img/img3.jpeg" alt=""></div>
-        <div class="meme-img"><img src="assets/img/img4.jpeg" alt=""></div>
-      </div>
-      <div class="row row-even flex">
-        <div class="meme-img"><img src="assets/img/img5.jpeg" alt=""></div>
-        <div class="meme-img"><img src="assets/img/img6.jpeg" alt=""></div>
-        <div class="meme-img"><img src="assets/img/img7.jpeg" alt=""></div>
-        <div class="meme-img"><img src="assets/img/img8.jpeg" alt=""></div>
-        <div class="meme-img"><img src="assets/img/img9.jpeg" alt=""></div>
-      </div>
-      <div class="row row-odd flex">
-        <div class="meme-img"><img src="assets/img/img10.jpeg" alt=""></div>
-        <div class="meme-img"><img src="assets/img/img11.jpeg" alt=""></div>
-        <div class="meme-img"><img src="assets/img/img12.jpeg" alt=""></div>
-        <div class="meme-img"><img src="assets/img/img13.jpeg" alt=""></div>
-      </div>
-      <div class="row row-even flex">
-        <div class="meme-img"><img src="assets/img/img14.jpeg" alt=""></div>
-      </div>-->
-    </section>
-
-    <section class="meme-generator hide">
-      <div class="canvas-container">
-        <!--<canvas id="meme-canvas" width="400" height="300"></canvas>-->
       </div>
       <button onclick="backToImgSelect(this)">Back to image selection</button>
       <button onclick="gotoCanvasImg()">Get a downloadable version</button>
