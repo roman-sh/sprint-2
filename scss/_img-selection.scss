@@ -1,13 +1,17 @@
 .img-select {
     // position: relative;
-    margin: 50px auto;
+    margin: auto;
     // width: calc(100vw - 40px);
     width: fit-content;
     min-width: 200px;
+    margin-bottom: 20px;
     .row {
         position: relative;
         &:nth-of-type(odd) {
             padding-left: calc((var(--hexa-width) / 2) + 5px);
+            &:only-of-type {
+                padding-left: 0;
+            }
         }
     }
     .meme-img {
@@ -20,11 +24,11 @@
         margin: 0 5px;
         overflow: hidden;
         & img {
-            // width: 100%;
             position: absolute;
             // height: 100%;
             height: calc(var(--hexa-height) * 1.1);
             // right: calc(50% - 75px); TODO: set in the rendering function according to img width
+            cursor: pointer;
         }
     }
 }

@@ -411,6 +411,9 @@ template {
   display: block;
   width: 100%; }
 
+.hide {
+  display: none; }
+
 /*----------  Lato Font  ----------*/
 @font-face {
   font-family: 'Lato';
@@ -500,6 +503,9 @@ h2, h3 {
   height: var(--hexa-height);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
 
+.action-container {
+  margin-top: 50px; }
+
 header {
   background-color: var(--secondary-color);
   padding-top: 12px;
@@ -521,6 +527,7 @@ header {
       position: absolute;
       top: 100%;
       right: calc(50% - 45px);
+      z-index: -1;
       display: block;
       border-top: 26px solid var(--secondary-color);
       border-right: 45px solid transparent;
@@ -528,20 +535,24 @@ header {
       background-color: white; }
 
 .img-select {
-  margin: 50px auto;
+  margin: auto;
   width: fit-content;
-  min-width: 200px; }
+  min-width: 200px;
+  margin-bottom: 20px; }
   .img-select .row {
     position: relative; }
     .img-select .row:nth-of-type(odd) {
       padding-left: calc((var(--hexa-width) / 2) + 5px); }
+      .img-select .row:nth-of-type(odd):only-of-type {
+        padding-left: 0; }
   .img-select .meme-img {
     position: relative;
     margin: 0 5px;
     overflow: hidden; }
     .img-select .meme-img img {
       position: absolute;
-      height: calc(var(--hexa-height) * 1.1); }
+      height: calc(var(--hexa-height) * 1.1);
+      cursor: pointer; }
 
 @media (min-width: 600px) {
   .img-select .row:nth-of-type(odd) {
@@ -550,10 +561,31 @@ header {
     margin: 0 10px; } }
 
 .meme-generator {
-  margin-bottom: 30px; }
+  padding-bottom: 50px;
+  width: calc(100% - 20px);
+  margin: auto;
+  text-align: center; }
+  .meme-generator .canvas-container {
+    width: fit-content;
+    margin: auto; }
+  .meme-generator canvas {
+    border: 1px solid hotpink;
+    max-width: 100%; }
 
-canvas {
-  border: 1px solid hotpink; }
+.keywords-container ul {
+  align-items: baseline; }
+
+.keywords-container button {
+  font-family: var(--primary-font);
+  margin: 1px 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .3s; }
+  .keywords-container button:hover {
+    color: var(--main-color);
+    transform: scale(1.2); }
 
 .main-container {
   background-color: #2eb398;

@@ -23,30 +23,13 @@
     </nav>
   </header>
 
-  <section class="img-select">
-    <div class="row row-odd flex">
-      <div class="meme-img"><img src="assets/img/img1.jpeg" alt=""></div>
-      <div class="meme-img"><img src="assets/img/img2.jpeg" alt=""></div>
-      <div class="meme-img"><img src="assets/img/img3.jpeg" alt=""></div>
-      <div class="meme-img"><img src="assets/img/img4.jpeg" alt=""></div>
-    </div>
-    <div class="row row-even flex">
-      <div class="meme-img"><img src="assets/img/img5.jpeg" alt=""></div>
-      <div class="meme-img"><img src="assets/img/img6.jpeg" alt=""></div>
-      <div class="meme-img"><img src="assets/img/img7.jpeg" alt=""></div>
-      <div class="meme-img"><img src="assets/img/img8.jpeg" alt=""></div>
-      <div class="meme-img"><img src="assets/img/img9.jpeg" alt=""></div>
-    </div>
-    <div class="row row-odd flex">
-      <div class="meme-img"><img src="assets/img/img10.jpeg" alt=""></div>
-      <div class="meme-img"><img src="assets/img/img11.jpeg" alt=""></div>
-      <div class="meme-img"><img src="assets/img/img12.jpeg" alt=""></div>
-      <div class="meme-img"><img src="assets/img/img13.jpeg" alt=""></div>
-    </div>
-    <div class="row row-even flex">
-      <div class="meme-img"><img src="assets/img/img14.jpeg" alt=""></div>
-    </div>
-  </section>
+  <section class="img-search">
+    
+    <input type="text" id="img-search-box" onkeyup="searchIfEnter(event, this)" placeholder="keyword1, keyword2..." />
+
+    <button onclick="toggleElementVisibility(this.parentNode, '.keywords-container')">Show popular keywords</button>
+
+    <div class="keywords-container hide"></div>
 
   <section class="meme-generator flex justify-center">
     <div class="canvas-container">
@@ -81,6 +64,41 @@
       </div>
     </div>
   </section>
+
+  <main class="action-container">
+    <section class="img-select">
+      <!--<div class="row row-odd flex">
+        <div class="meme-img"><img src="assets/img/img1.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img2.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img3.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img4.jpeg" alt=""></div>
+      </div>
+      <div class="row row-even flex">
+        <div class="meme-img"><img src="assets/img/img5.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img6.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img7.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img8.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img9.jpeg" alt=""></div>
+      </div>
+      <div class="row row-odd flex">
+        <div class="meme-img"><img src="assets/img/img10.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img11.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img12.jpeg" alt=""></div>
+        <div class="meme-img"><img src="assets/img/img13.jpeg" alt=""></div>
+      </div>
+      <div class="row row-even flex">
+        <div class="meme-img"><img src="assets/img/img14.jpeg" alt=""></div>
+      </div>-->
+    </section>
+
+    <section class="meme-generator hide">
+      <div class="canvas-container">
+        <!--<canvas id="meme-canvas" width="400" height="300"></canvas>-->
+      </div>
+      <button onclick="backToImgSelect(this)">Back to image selection</button>
+      <button onclick="gotoCanvasImg()">Get a downloadable version</button>
+    </section>
+  </main>
   
   <div class="main-container flex align-center justify-center">
     <section class="about-us flex flex-wrap space-between">
@@ -126,6 +144,7 @@
 <script src="js/main.js"></script>
 <script src="js/render-imgs.js"></script>
 <script src="js/canvas-editor.js"></script>
+<script src="js/filter-imgs.js"></script>
 </body>
 
 </html>
