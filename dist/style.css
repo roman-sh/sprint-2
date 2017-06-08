@@ -557,16 +557,20 @@ canvas {
 
 .main-container {
   background-color: #2eb398;
-  height: 342px; }
+  height: 242px; }
   .main-container .about-us {
     width: 100%;
     max-width: 820px;
-    padding: 0 20px; }
+    padding: 0 20px;
+    min-width: 305px; }
     .main-container .about-us img {
       height: 120%; }
     .main-container .about-us .about-us-txt {
       max-width: calc(100% - 226px);
       color: #d7fcf5; }
+      @media (max-width: 600px) {
+        .main-container .about-us .about-us-txt {
+          max-width: calc(100% - 100px); } }
       .main-container .about-us .about-us-txt div:last-child {
         width: fit-content;
         margin-left: auto; }
@@ -577,5 +581,8 @@ canvas {
       .main-container .about-us .about-us-txt p {
         font-size: 12px;
         line-height: 22px; }
+        @media (max-width: 600px) {
+          .main-container .about-us .about-us-txt p {
+            display: none; } }
 
 /* Components */

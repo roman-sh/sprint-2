@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roman's and Chen's Crazy Adventures</title>
+  <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Mogra|Open+Sans+Condensed:300|Varela+Round|Vibur" rel="stylesheet">
   <link rel="stylesheet" href="dist/style.css" />
 </head>
 
@@ -50,6 +51,34 @@
   <section class="meme-generator flex justify-center">
     <div class="canvas-container">
       <canvas id="meme-canvas" width="400" height="300"></canvas>
+      <div class="editor">
+        <div class="controls0">
+          <input type="text" placeholder="some text" onkeyup="updateText(value,0)">
+          <input type="color" onchange="changeColor(value,0)">
+          <select name="fonts" onchange="changeFont(value,0)">
+            <option value="" disabled selected>Select Font</option>
+            <option value="Vibur">Vibur</option>
+            <option value="Bubbler One">Bubbler One</option>
+            <option value="Mogra">Mogra</option>
+            <option value="Varela Round">Varela Round</option>
+          </select>
+          <button  onclick="fontSizeClicked('+',0)">+</button>
+          <button  onclick="fontSizeClicked('-',0)">-</button>
+        </div>
+        <div class="controls1">
+          <input type="text" placeholder="some text" onkeyup="updateText(value,1)">
+          <input type="color" onchange="changeColor(value,1)">
+          <select name="fonts" onchange="changeFont(value,1)">
+            <option value="" disabled selected>Select Font</option>
+            <option value="Vibur">Vibur</option>
+            <option value="Bubbler One">Bubbler One</option>
+            <option value="Mogra">Mogra</option>
+            <option value="Varela Round">Varela Round</option>
+          </select>
+          <button  onclick="fontSizeClicked('+',1)">+</button>
+          <button  onclick="fontSizeClicked('-',1)">-</button>
+        </div>
+      </div>
     </div>
   </section>
   
@@ -96,6 +125,7 @@
     
 <script src="js/main.js"></script>
 <script src="js/render-imgs.js"></script>
+<script src="js/canvas-editor.js"></script>
 </body>
 
 </html>
