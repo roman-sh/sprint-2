@@ -414,6 +414,10 @@ template {
 .hide {
   display: none; }
 
+.preload-fonts {
+  position: absolute;
+  top: -100px; }
+
 /*----------  Lato Font  ----------*/
 @font-face {
   font-family: 'Lato';

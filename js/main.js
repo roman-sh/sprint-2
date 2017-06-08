@@ -92,7 +92,7 @@ function renderCanvas() {
         elCanvasBox.innerHTML = '';
         elCanvasBox.appendChild(elCanvas);
 
-        elCanvasBox.parentNode.classList.remove('hide');
+        elCanvasBox.parentNode.parentNode.classList.remove('hide'); // feels hacky
     }
 }
 
