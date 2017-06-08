@@ -109,10 +109,18 @@ function renderCanvasTxts(context) {
 }
 
 function memeImgClicked(imgId) {
+    var elKeywords = document.querySelector('.keywords-container');
+    elKeywords.classList.add('hide');
     animateOut();
     setTimeout(function(){
         gState.shouldRenderImgs = false;
         gState.selectedImgId = imgId;
+
+        renderChangingMenu(1);
+        
+        // var elImgSelect = document.querySelector('.img-select');
+        // elImgSelect.classList.add('hide');
+
         renderCanvas();
         animateCanvas();
 
@@ -122,35 +130,27 @@ function memeImgClicked(imgId) {
     
 }
 
-function backToImgSelect() {
-    elGenerator = document.querySelector('.meme-generator')
-    elGenerator.classList.add('hide');
-    gState.shouldRenderImgs = false;
-    gState.selectedImgId = imgId;
-    renderCanvas();
-
-    renderChangingMenu();
-
-    var elKeywords = document.querySelector('.keywords-container');
-    elKeywords.classList.add('hide');
-
-    var elImgSelect = document.querySelector('.img-select');
-    elImgSelect.classList.add('hide');
-
-}
-
-function renderChangingMenu() {
+function renderChangingMenu(zeroOrOne) {
     var elMenu = document.querySelector('.changing-menu');
-    elMenu.innerHTML =  '<li><button onclick="backToImgSelect()">Back to image selection</button></li>' +
+    if (zeroOrOne === 0) {
+        elMenu.innerHTML = '<li><button onclick="showElement(\'.keywords-container\')">Show keywords</button></li>' +
+        '<li><input type="text" id="img-search-box" onkeyup="searchIfEnter(event, this)" placeholder="keyword1, keyword2..." /></li>';
+    } else {
+        elMenu.innerHTML =  '<li><button onclick="backToImgSelect()">Back to image selection</button></li>' +
                         '<li><button onclick="gotoCanvasImg()">Get a downloadable version</button></li>';
+    }
 }
 
-function backToImgSelect(el) {
-    el.parentNode.classList.add('hide');
+function backToImgSelect() {
+    var elMemeGen = document.querySelector('.meme-generator');
+    elMemeGen.classList.add('hide');
     
     gState.shouldRenderImgs = true;
     gState.prevMaxImgPerRow = undefined;
     gShouldAnimate = true;
+
+    renderChangingMenu(0);
+
     renderImgSelect(gState.currImgsToRender);
 }
 
