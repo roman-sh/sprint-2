@@ -538,10 +538,15 @@ header {
     width: 40%; }
   header .left {
     justify-content: flex-end; }
-  header .fixed-menu li {
-    margin-right: 15px; }
-  header .changing-menu li {
-    margin-left: 15px; }
+  header .fixed-menu {
+    flex-direction: column; }
+    header .fixed-menu li {
+      margin-right: 15px;
+      padding: .5em; }
+  header .changing-menu {
+    flex-direction: column; }
+    header .changing-menu li {
+      margin-left: 15px; }
   header .header-logo {
     height: 100%; }
     header .header-logo::after {
@@ -562,6 +567,7 @@ header {
     color: #c9c9c9;
     outline: none; }
   header button {
+    padding: -5em;
     cursor: pointer;
     background-color: transparent;
     outline: none;
@@ -574,7 +580,9 @@ header {
 
 @media (min-width: 600px) {
   header {
-    font-size: 12px; } }
+    font-size: 12px; }
+    header .changing-menu, header .fixed-menu {
+      flex-direction: row; } }
 
 .img-select {
   margin: auto;

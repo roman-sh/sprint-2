@@ -133,11 +133,11 @@ function memeImgClicked(imgId) {
 function renderChangingMenu(zeroOrOne) {
     var elMenu = document.querySelector('.changing-menu');
     if (zeroOrOne === 0) {
-        elMenu.innerHTML = '<li><button onclick="showElement(\'.keywords-container\')">Show keywords</button></li>' +
+        elMenu.innerHTML = '<li><button onclick="showElement(\'.keywords-container\')">keywords</button></li>' +
         '<li><input type="text" id="img-search-box" onkeyup="searchIfEnter(event, this)" placeholder="keyword1, keyword2..." /></li>';
     } else {
-        elMenu.innerHTML =  '<li><button onclick="backToImgSelect()">Back to image selection</button></li>' +
-                        '<li><button onclick="gotoCanvasImg()">Get a downloadable version</button></li>';
+        elMenu.innerHTML =  '<li><button onclick="backToImgSelect()">back</button></li>' +
+                        '<li><button onclick="gotoCanvasImg()">get image</button></li>';
     }
 }
 

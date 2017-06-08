@@ -28,25 +28,19 @@ header {
     .left {
         justify-content: flex-end;
     }
-    .fixed-menu li {
-        margin-right: 15px;
+    .fixed-menu {
+        flex-direction: column;
+        li {
+            margin-right: 15px;
+            padding: .5em;
+        }
+    } 
+    .changing-menu {
+        flex-direction: column;
+        li {
+            margin-left: 15px;
+        }
     }
-    .changing-menu li {
-        margin-left: 15px;
-    }
-    
-    // ul {
-    //     width: calc(100% / 3);
-    //     &.fixed-menu li {
-    //         margin-right: 15px;
-    //     }
-    //     &.changing-menu {
-    //         justify-self: flex-end;
-    //         li {
-    //             margin-left: 15px;
-    //         }
-    //     }
-    // }
     .header-logo {
         height: 100%;
         // margin: auto;
@@ -72,6 +66,7 @@ header {
         outline: none;
     }
     button {
+        padding: -5em;
         cursor: pointer;
         background-color: transparent;
         outline: none;
@@ -89,5 +84,8 @@ header {
 @media (min-width: $mobile-breakpoint) {
     header {
         font-size: 12px;
+        .changing-menu, .fixed-menu {
+            flex-direction: row;
+        }
     }
 }
