@@ -22,6 +22,16 @@
     </nav>
   </header>
 
+  <section class="img-search">
+    
+    <input type="text" id="img-search-box" onkeyup="searchIfEnter(event, this)" placeholder="keyword1, keyword2..." />
+
+    <button onclick="toggleElementVisibility(this.parentNode, '.keywords-container')">Show popular keywords</button>
+
+    <div class="keywords-container hide"></div>
+
+  </section>
+
   <main class="action-container">
     <section class="img-select">
       <!--<div class="row row-odd flex">
@@ -53,6 +63,7 @@
         <!--<canvas id="meme-canvas" width="400" height="300"></canvas>-->
       </div>
       <button onclick="backToImgSelect(this)">Back to image selection</button>
+      <button onclick="gotoCanvasImg()">Get a downloadable version</button>
     </section>
   </main>
   
@@ -99,6 +110,7 @@
     
 <script src="js/main.js"></script>
 <script src="js/render-imgs.js"></script>
+<script src="js/filter-imgs.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,19 @@
+.keywords-container {
+    ul {
+        align-items: baseline;
+    }
+    button {
+        font-family: var(--primary-font);
+        margin: 1px 5px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            color: var(--main-color);
+            transform: scale(1.2);
+        }
+
+    }
+}

@@ -527,6 +527,7 @@ header {
       position: absolute;
       top: 100%;
       right: calc(50% - 45px);
+      z-index: -1;
       display: block;
       border-top: 26px solid var(--secondary-color);
       border-right: 45px solid transparent;
@@ -536,11 +537,14 @@ header {
 .img-select {
   margin: auto;
   width: fit-content;
-  min-width: 200px; }
+  min-width: 200px;
+  margin-bottom: 20px; }
   .img-select .row {
     position: relative; }
     .img-select .row:nth-of-type(odd) {
       padding-left: calc((var(--hexa-width) / 2) + 5px); }
+      .img-select .row:nth-of-type(odd):only-of-type {
+        padding-left: 0; }
   .img-select .meme-img {
     position: relative;
     margin: 0 5px;
@@ -568,6 +572,21 @@ header {
     border: 1px solid hotpink;
     max-width: 100%; }
 
+.keywords-container ul {
+  align-items: baseline; }
+
+.keywords-container button {
+  font-family: var(--primary-font);
+  margin: 1px 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .3s; }
+  .keywords-container button:hover {
+    color: var(--main-color);
+    transform: scale(1.2); }
+
 .main-container {
   background-color: #2eb398;
   height: 342px; }
@@ -592,4 +611,3 @@ header {
         line-height: 22px; }
 
 /* Components */
-/*nothing to add*/

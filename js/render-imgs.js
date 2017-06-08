@@ -35,13 +35,14 @@ function getImgSelectHtml(imgs, rowMargin, maxImgPerRow) {
     var htmlStr = '';
     var rowCount = 0;
     var imgIdx = 0;
+    var onlyOneRow = maxImgPerRow >= imgs.length;
     while (imgIdx < imgs.length) {
         htmlStr += `<div class="row flex" style="top: ${rowCount * -rowMargin}px">`;
-        var imgPerRow = (rowCount % 2 === 0)? maxImgPerRow - 1 : maxImgPerRow;
+        var imgPerRow = (rowCount % 2 === 0 && !onlyOneRow)? maxImgPerRow - 1 : maxImgPerRow;
         var limit = imgIdx + imgPerRow;
         for (var i = imgIdx; i < limit && i < imgs.length; i++) {
             htmlStr += `<div class="meme-img hexa">
-                        <img src="${imgs[i].url}" onClick="memeImgClicked(${gImgs[i].id})">
+                        <img src="${imgs[i].url}" onClick="memeImgClicked(${imgs[i].id})">
                         </div>`;
         }
         htmlStr += '</div>';
