@@ -667,4 +667,17 @@ header {
           .main-container .about-us .about-us-txt p {
             display: none; } }
 
+.controls {
+  background-color: #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  min-width: 300px; }
+
+.controls > * {
+  margin: 5px; }
+
+.control-buttons {
+  background-color: #323232;
+  padding: 10px; }
+
 /* Components */

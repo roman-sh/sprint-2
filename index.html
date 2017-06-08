@@ -7,6 +7,7 @@
   <title>Roman's and Chen's Crazy Adventures</title>
   <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Mogra|Varela+Round|Vibur" rel="stylesheet">
   <link rel="stylesheet" href="dist/style.css" />
+  <link rel="stylesheet" href="dist/animate.css" />
 </head>
 
 <!--Used to make sure that all fonts load before the canvas tries to use them-->
@@ -87,41 +88,49 @@
       </div>
 
       <div class="editor">
-        <div class="controls0">
+        <div class="controls flex flex-wrap justify-center">
           <input type="text" placeholder="some text" onkeyup="updateText(value,0)">
-          <label>Text color:
-            <input type="color" onchange="changeTextColor(value,0)">
-          </label>
-          <label>Outline color:
-            <input type="color" onchange="changeStrokeColor(value,0)">
-          </label>
-          <select name="fonts" onchange="changeFont(value,0)">
-            <option value="" disabled selected>Select Font</option>
-            <option value="Vibur">Vibur</option>
-            <option value="Bubbler One">Bubbler One</option>
-            <option value="Mogra">Mogra</option>
-            <option value="Varela Round">Varela Round</option>
-          </select>
-          <button  onclick="fontSizeClicked('+',0)">+</button>
-          <button  onclick="fontSizeClicked('-',0)">-</button>
+          <div>
+            <label>Text color:
+              <input type="color" onchange="changeTextColor(value,0)">
+            <label>
+            <label>Outline color:
+              <input type="color" onchange="changeStrokeColor(value,0)">
+            </label>
+          </div>
+          <div>
+            <select class="fonts" onchange="changeFont(value,0)">
+              <option value="" disabled selected>Select Font</option>
+              <option value="Vibur">Vibur</option>
+              <option value="Bubbler One">Bubbler One</option>
+              <option value="Mogra">Mogra</option>
+              <option value="Varela Round">Varela Round</option>
+            </select>
+            <button  onclick="fontSizeClicked('+',0)">Size +</button>
+            <button  onclick="fontSizeClicked('-',0)">Size -</button>
+          </div>
         </div>
-        <div class="controls1">
+        <div class="controls flex flex-wrap justify-center">
           <input type="text" placeholder="some text" onkeyup="updateText(value,1)">
-          <label>Text color:
-            <input type="color" onchange="changeTextColor(value,1)">
-          <label>
-          <label>Outline color:
-            <input type="color" onchange="changeStrokeColor(value,1)">
-          </label>
-          <select name="fonts" onchange="changeFont(value,1)">
-            <option value="" disabled selected>Select Font</option>
-            <option value="Vibur">Vibur</option>
-            <option value="Bubbler One">Bubbler One</option>
-            <option value="Mogra">Mogra</option>
-            <option value="Varela Round">Varela Round</option>
-          </select>
-          <button  onclick="fontSizeClicked('+',1)">+</button>
-          <button  onclick="fontSizeClicked('-',1)">-</button>
+          <div>
+            <label>Text color:
+              <input type="color" onchange="changeTextColor(value,1)">
+            <label>
+            <label>Outline color:
+              <input type="color" onchange="changeStrokeColor(value,1)">
+            </label>
+          </div>
+          <div>
+            <select class="fonts" onchange="changeFont(value,1)">
+              <option value="" disabled selected>Select Font</option>
+              <option value="Vibur">Vibur</option>
+              <option value="Bubbler One">Bubbler One</option>
+              <option value="Mogra">Mogra</option>
+              <option value="Varela Round">Varela Round</option>
+            </select>
+            <button  onclick="fontSizeClicked('+',1)">Size +</button>
+            <button  onclick="fontSizeClicked('-',1)">Size -</button>
+          </div>
         </div>
       </div>
       <!--<button onClick="addTxt()">Add a line of text</button>-->
@@ -175,6 +184,7 @@
 <script src="js/render-imgs.js"></script>
 <script src="js/canvas-editor.js"></script>
 <script src="js/filter-imgs.js"></script>
+<script src="js/animation.js"></script>
 </body>
 
 </html>
