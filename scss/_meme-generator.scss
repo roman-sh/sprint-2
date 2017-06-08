@@ -4,13 +4,28 @@
     margin: auto;
     text-align: center;
 
-    .canvas-container {
+    .canvas-rendering-zone {
         width: fit-content;
+        margin: auto;
+        border: 10px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 2px #908f8f;
+
+
+        div {
+            position: relative;
+        }
+    }
+
+    .canvas-container {
+        // height: fit-content;
         margin: auto;
     }
 
     canvas {
-        border: 1px solid hotpink;
+        // border-radius: 5px;
+        // border-bottom: 3px inset lightgray;
         max-width: 100%;
     }   
 }

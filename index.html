@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="dist/animate.css" />
 </head>
 
+<!--Used to make sure that all fonts load before the canvas tries to use them-->
 <div class="preload-fonts">
   <span style="font-family: 'Bubbler One'"></span>
   <span style="font-family: 'Mogra'"></span>
@@ -20,6 +21,29 @@
 <body onload="init(this)">
 
   <header>
+    <nav class="main-nav flex space-between">
+      <div class="right flex align-center">
+      <ul class="clean-list fixed-menu flex align-center">
+        <li><a href="#">portfolio</a></li>
+        <li><a href="#">about</a></li>
+      </ul>
+      </div>
+      <div class="center">
+        <a class="header-logo" href="#"><img src="assets/img/logo.png" alt="Company Logo" /></a>
+      </div>
+      <div class="left flex align-center">
+      <ul class="clean-list changing-menu flex align-center img-search">
+        <li>
+          <button onclick="showElement('.keywords-container')">Show keywords</button>
+        </li>
+        <li>
+          <input type="text" id="img-search-box" onkeyup="searchIfEnter(event, this)" placeholder="keyword1, keyword2..." />
+        </li>
+      </ul>
+      </div>
+    </nav>
+  </header>
+  <!--<header>
     <nav class="main-nav">
       <ul class="clean-list flex space-between align-center">
         <li><a href="#">portfolio</a></li>
@@ -29,15 +53,15 @@
         <li><a href="#">get in touch</a></li>
       </ul>
     </nav>
-  </header>
+  </header>-->
 
-  <section class="img-search">
+  <!--<section class="img-search">
     
     <input type="text" id="img-search-box" onkeyup="searchIfEnter(event, this)" placeholder="keyword1, keyword2..." />
 
-    <button onclick="toggleElementVisibility(this.parentNode, '.keywords-container')">Show popular keywords</button>
+    <button onclick="toggleElementVisibility(this.parentNode, '.keywords-container')">Show popular keywords</button>-->
 
-    <div class="keywords-container hide"></div>
+  <section class="keywords"><div class="keywords-container hide"></div></section>
 
   <main class="action-container">
     <section class="img-select">
@@ -62,6 +86,7 @@
           <!--<canvas id="meme-canvas" width="400" height="300"></canvas>-->
         </div>
       </div>
+
       <div class="editor">
         <div class="controls flex flex-wrap justify-center">
           <input type="text" placeholder="some text" onkeyup="updateText(value,0)">

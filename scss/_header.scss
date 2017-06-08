@@ -1,20 +1,55 @@
 header {
     background-color: var(--secondary-color);
     padding-top: 12px;
+    margin-bottom: 50px;
     text-align: center;
     font-size: rem(10px);
     color: #fff;
     text-transform: uppercase;
     font-family: var(--primary-font);
-    font-weight: 700px;
+    font-weight: bold;
+    transition: font-size .4s;
+    a {
+        transition: color .3s;
+        &:hover {
+            color: var(--main-color);
+        } 
+    }
     .main-nav {
         position: relative;
         margin: 0 auto;
-        max-width: 370px;
+        max-width: 800px;
         min-width: 300px;
+        padding: 0 20px;
     }
+    .right, .left {
+        width: 40%;
+    }
+    .left {
+        justify-content: flex-end;
+    }
+    .fixed-menu li {
+        margin-right: 15px;
+    }
+    .changing-menu li {
+        margin-left: 15px;
+    }
+    
+    // ul {
+    //     width: calc(100% / 3);
+    //     &.fixed-menu li {
+    //         margin-right: 15px;
+    //     }
+    //     &.changing-menu {
+    //         justify-self: flex-end;
+    //         li {
+    //             margin-left: 15px;
+    //         }
+    //     }
+    // }
     .header-logo {
         height: 100%;
+        // margin: auto;
         // position: relative;
         &::after {
             content: "";
@@ -28,5 +63,31 @@ header {
             border-left: 45px solid transparent;
             background-color: white;
         }
+    }
+    input {
+        background-color: #3c3b3b;
+        border: 2px inset #6b6262;
+        padding: .5em;
+        color: #c9c9c9;
+        outline: none;
+    }
+    button {
+        cursor: pointer;
+        background-color: transparent;
+        outline: none;
+        color: white;
+        text-transform: uppercase;
+        border: none;
+        transition: color .3s;
+        &:hover {
+            color: var(--main-color);
+        }
+    }
+}
+
+
+@media (min-width: $mobile-breakpoint) {
+    header {
+        font-size: 12px;
     }
 }

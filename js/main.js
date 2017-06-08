@@ -50,7 +50,7 @@ function getInitGState() {
                 y: 55
             },
             {
-                text: 'But you suck',
+                text: 'And you rock!',
                 size: 50,
                 font: 'monospace',
                 align: 'center',
@@ -125,6 +125,28 @@ function memeImgClicked(imgId) {
 function backToImgSelect() {
     elGenerator = document.querySelector('.meme-generator')
     elGenerator.classList.add('hide');
+    gState.shouldRenderImgs = false;
+    gState.selectedImgId = imgId;
+    renderCanvas();
+
+    renderChangingMenu();
+
+    var elKeywords = document.querySelector('.keywords-container');
+    elKeywords.classList.add('hide');
+
+    var elImgSelect = document.querySelector('.img-select');
+    elImgSelect.classList.add('hide');
+
+}
+
+function renderChangingMenu() {
+    var elMenu = document.querySelector('.changing-menu');
+    elMenu.innerHTML =  '<li><button onclick="backToImgSelect()">Back to image selection</button></li>' +
+                        '<li><button onclick="gotoCanvasImg()">Get a downloadable version</button></li>';
+}
+
+function backToImgSelect(el) {
+    el.parentNode.classList.add('hide');
     
     gState.shouldRenderImgs = true;
     gState.prevMaxImgPerRow = undefined;
@@ -140,17 +162,21 @@ function gotoCanvasImg() {
 }
 
 
-// TODO: get rid of this
-function toggleElementVisibility(el, selector) {
-    if (!selector) el.classList.toggle('hide');
-    else {
-        var elChild = el.querySelector(selector);
-        elChild.classList.toggle('hide');
-    }
-    // if (typeof elOrSelector === String) {
-    //     var el = document.querySelector(elOrSelector);
-    //     el.classList.toggle('hide');
-    // } else {
-    //     elOrSelector.classList.toggle('hide');
-    // }
+// TODO: get rid of these
+// function toggleElementVisibility(el, selector) {
+//     if (!selector) el.classList.toggle('hide');
+//     else {
+//         var elChild = el.querySelector(selector);
+//         elChild.classList.toggle('hide');
+//     }
+//     // if (typeof elOrSelector === String) {
+//     //     var el = document.querySelector(elOrSelector);
+//     //     el.classList.toggle('hide');
+//     // } else {
+//     //     elOrSelector.classList.toggle('hide');
+//     // }
+// }
+function showElement(selector) {
+    var el = document.querySelector(selector);
+    el.classList.remove('hide');
 }
